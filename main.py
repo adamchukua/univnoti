@@ -221,13 +221,16 @@ def schedule_send_link(i):
 
 if __name__ == "__main__":
     if len(scheduleList[typeOfWeek][dayOfWeek]) > 0:
-        schedule.every().day.at(times[0]).do(schedule_send_link, 0)
-        schedule.every().day.at(times[1]).do(schedule_send_link, 1)
-        schedule.every().day.at(times[2]).do(schedule_send_link, 2)
-        schedule.every().day.at(times[3]).do(schedule_send_link, 3)
-        schedule.every().day.at(times[4]).do(schedule_send_link, 4)
-        schedule.every().day.at(times[5]).do(schedule_send_link, 5)
-        schedule.every().day.at(times[6]).do(schedule_send_link, 6)
+        try:
+            schedule.every().day.at(times[0]).do(schedule_send_link, 0)
+            schedule.every().day.at(times[1]).do(schedule_send_link, 1)
+            schedule.every().day.at(times[2]).do(schedule_send_link, 2)
+            schedule.every().day.at(times[3]).do(schedule_send_link, 3)
+            schedule.every().day.at(times[4]).do(schedule_send_link, 4)
+            schedule.every().day.at(times[5]).do(schedule_send_link, 5)
+            schedule.every().day.at(times[6]).do(schedule_send_link, 6)
+        except:
+            print("There are not any lessons today")
 
     Thread(target=schedule_checker).start()
 
