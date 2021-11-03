@@ -158,12 +158,12 @@ def day_lessons(day):
     result = "*" + weekdays[day] + " (тиждень " + str(typeOfWeek + 1) + ")*\n\n"
     i = 1
 
-    if len(lessons[typeOfWeek][day]) > 0:
+    if len(scheduleList[typeOfWeek][day]) > 0:
         for lesson in scheduleList[typeOfWeek][day]:
             try:
-                result += str(i) + ". " + lesson[0][0][0] + " - " + lesson[0][0][1] + "\n"
+                result += str(i) + ". " + lesson[0][0] + " - " + lesson[0][1] + "\n"
             except:
-                print("error")
+                print("error: a lesson doesn't exist")
             i += 1
     else:
         result = "Нічого немає, чіллим... Жартую, у вас курсова."
@@ -214,9 +214,9 @@ def schedule_checker():
 def schedule_send_link(i):
     return bot.send_message(-1001637467506,
                             "📆 Через 5 хвилин пара \"" +
-                            scheduleList[typeOfWeek][dayOfWeek][i][0][0][0] +
+                            scheduleList[typeOfWeek][dayOfWeek][i][0][0] +
                             "\": " +
-                            scheduleList[typeOfWeek][dayOfWeek][i][0][0][1])
+                            scheduleList[typeOfWeek][dayOfWeek][i][0][1])
 
 
 if __name__ == "__main__":
