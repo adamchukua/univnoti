@@ -29,7 +29,7 @@ def day_lessons(day):
 
     if len(scheduleList[typeOfWeek][day]) > 0:
         for lesson in scheduleList[typeOfWeek][day]:
-            if len(lesson[0][0]) > 0:
+            if len(lesson) > 0:
                 result += str(i) + ". " + lesson[0][0] + " - " + lesson[0][1] + "\n"
             i += 1
     else:
@@ -96,7 +96,6 @@ if __name__ == "__main__":
     numberOfLessons = len(scheduleList[typeOfWeek][dayOfWeek])
 
     while numberOfLessons > i - 1:
-        print(i)
         schedule.every().day.at(reminderTimes[i]).do(schedule_send_link, i)
         i += 1
 
