@@ -7,7 +7,7 @@ scheduleList = [
                 lessons["алгп"]
             ],
             [
-                lessons["ткпп"]
+                lessons["тймсп"]
             ],
             [
                 lessons["веб"]
@@ -23,6 +23,11 @@ scheduleList = [
             ],
             [
                 lessons["ооп"]
+            ],
+            [],
+            [],
+            [
+            	lessons["веб"]
             ]
         ],
         [

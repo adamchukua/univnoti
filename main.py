@@ -61,15 +61,18 @@ def send_help(message):
 
 @bot.message_handler(func=lambda message: True)
 def main(message):
+    if message.text[0] != "!":
+        return
+
     request = message.text.lower()[1:]
 
     if request in lessons:
         bot.send_message(message.chat.id, lessons[request][1])
-    elif request == "сьогодні":
+    elif request == "сьогодні" or request == "с":
         bot.send_message(message.chat.id, day_lessons(dayOfWeek),
                          parse_mode="Markdown",
                          disable_web_page_preview=True)
-    elif request == "завтра":
+    elif request == "завтра" or request == "з":
         bot.send_message(message.chat.id, day_lessons((dayOfWeek + 1) % 7),
                          parse_mode="Markdown",
                          disable_web_page_preview=True)
