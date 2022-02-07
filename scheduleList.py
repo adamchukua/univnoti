@@ -4,55 +4,47 @@ scheduleList = [
     [
         [
             [
-                lessons["алгп"]
+                lessons["ос"]
             ],
             [
-                lessons["тймсп"]
+                lessons["ооп"]
             ],
             [
-                lessons["веб"]
+                lessons["пай"]
+            ],
+            [
+                lessons["чм"]
+            ]
+        ],
+        [
+            [
+                lessons["пай"]
+            ],
+            [
+                lessons["чм"]
+            ],
+            [
+                lessons["англ"]
+            ]
+        ],
+        [
+            [
+                lessons["пхп"]
+            ],
+            [
+                lessons["обд"]
+            ],
+            [
+                lessons["ос"]
             ]
         ],
         [],
         [
             [
-                lessons["ткпл"]
-            ],
-            [
-                lessons["алгл"]
-            ],
-            [
-                lessons["ооп"]
-            ],
-            [],
-            [],
-            [
-            	lessons["веб"]
-            ]
-        ],
-        [
-            [
-                lessons["кгозп"]
-            ],
-            [
-                lessons["веб"]
-            ],
-            [
-                lessons["нп"]
-            ]
-        ],
-        [
-            [
                 lessons["ооп"]
             ],
             [
-                lessons["англ"]
-            ],
-            [
-                lessons["ткпп"]
-            ],
-            [
-                lessons["фв"]
+                lessons["емпі"]
             ]
         ],
         [],
@@ -61,51 +53,47 @@ scheduleList = [
     [
         [
             [
-                lessons["алгп"]
+                lessons["обд"]
             ],
             [
-                lessons["тймсп"]
+                lessons["ооп"]
             ],
             [
-                lessons["веб"]
+                lessons["пхп"]
+            ],
+            [
+                lessons["емпі"]
+            ]
+        ],
+        [
+            [
+                lessons["пай"]
+            ],
+            [
+                lessons["чм"]
+            ],
+            [
+                lessons["англ"]
+            ]
+        ],
+        [
+            [
+                lessons["пхп"]
+            ],
+            [
+                lessons["обд"]
+            ],
+            [
+                lessons["ос"]
             ]
         ],
         [],
         [
             [
-                lessons["тймсл"]
-            ],
-            [
-                lessons["алгл"]
-            ],
-            [
-                lessons["ооп"]
-            ]
-        ],
-        [
-            [],
-            [
-                lessons["кгозл"]
-            ],
-            [
-                lessons["нп"]
-            ],
-            [
-                lessons["нп"]
-            ]
-        ],
-        [
-            [
                 lessons["ооп"]
             ],
             [
-                lessons["англ"]
-            ],
-            [
-                lessons["ткпп"]
-            ],
-            [
-                lessons["фв"]
+                lessons["емпі"]
             ]
         ],
         [],
