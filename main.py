@@ -9,7 +9,7 @@ from threading import Thread
 from time import sleep
 
 bot = telebot.TeleBot(TOKEN)
-typeOfWeek = (datetime.datetime.today().isocalendar()[1] - datetime.date(2021, 10, 29).isocalendar()[1]) % 2
+typeOfWeek = (datetime.datetime.today().isocalendar()[1] - datetime.date(2022, 2, 7).isocalendar()[1]) % 2
 dayOfWeek = datetime.datetime.today().weekday()
 
 weekdays = {
