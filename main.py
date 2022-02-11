@@ -23,8 +23,8 @@ weekdays = {
 }
 
 
-def day_lessons(day):
-    result = "*" + weekdays[day] + " (тиждень " + str(typeOfWeek + 1) + ")*\n\n"
+def day_lessons(day, pretext):
+    result = "*" + pretext + " " + weekdays[day] + " (тиждень " + str(typeOfWeek + 1) + ")*\n\n"
     i = 1
 
     if len(scheduleList[typeOfWeek][day]) > 0:
@@ -33,7 +33,7 @@ def day_lessons(day):
                 result += str(i) + ". " + lesson[0][0] + " - " + lesson[0][1] + "\n"
             i += 1
     else:
-        result = "Нічого немає, чіллим... Жартую, у вас курсова."
+        result = "нічого немає, чіллим... Жартую, у вас курсова."
 
     return result
 
@@ -69,11 +69,11 @@ def main(message):
     if request in lessons:
         bot.send_message(message.chat.id, lessons[request][1])
     elif request == "сьогодні" or request == "с":
-        bot.send_message(message.chat.id, "Сьогодні " + day_lessons(dayOfWeek),
+        bot.send_message(message.chat.id, day_lessons(dayOfWeek, "Сьогодні"),
                          parse_mode="Markdown",
                          disable_web_page_preview=True)
     elif request == "завтра" or request == "з":
-        bot.send_message(message.chat.id, "Завтра " + day_lessons((dayOfWeek + 1) % 7),
+        bot.send_message(message.chat.id, day_lessons((dayOfWeek + 1) % 7, "Завтра"),
                          parse_mode="Markdown",
                          disable_web_page_preview=True)
     elif request == "все":
