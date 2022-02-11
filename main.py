@@ -13,13 +13,13 @@ typeOfWeek = (datetime.datetime.today().isocalendar()[1] - datetime.date(2022, 2
 dayOfWeek = datetime.datetime.today().weekday()
 
 weekdays = {
-    0: "Понеділок",
-    1: "Вівторок",
-    2: "Середа",
-    3: "Четвер",
-    4: "П'ятниця",
-    5: "Субота",
-    6: "Неділя"
+    0: "понеділок",
+    1: "вівторок",
+    2: "середа",
+    3: "четвер",
+    4: "п'ятниця",
+    5: "субота",
+    6: "неділя"
 }
 
 
@@ -69,11 +69,11 @@ def main(message):
     if request in lessons:
         bot.send_message(message.chat.id, lessons[request][1])
     elif request == "сьогодні" or request == "с":
-        bot.send_message(message.chat.id, day_lessons(dayOfWeek),
+        bot.send_message(message.chat.id, "Сьогодні " + day_lessons(dayOfWeek),
                          parse_mode="Markdown",
                          disable_web_page_preview=True)
     elif request == "завтра" or request == "з":
-        bot.send_message(message.chat.id, day_lessons((dayOfWeek + 1) % 7),
+        bot.send_message(message.chat.id, "Завтра " + day_lessons((dayOfWeek + 1) % 7),
                          parse_mode="Markdown",
                          disable_web_page_preview=True)
     elif request == "все":
