@@ -1,4 +1,4 @@
-reminderTimes = [
+reminder_times = [
     "08:55",
     "10:25",
     "12:25",
