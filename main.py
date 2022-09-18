@@ -28,7 +28,7 @@ def day_lessons(day, pretext):
                     for lesson1 in lesson:
                         result += f"{str(lesson_number)}. {lesson1[0]} - {lesson1[1]}\n"
                 else:
-                    result += f"{str(lesson_number)}. {lesson[0][0]} - {lesson1[0][1]}\n"
+                    result += f"{str(lesson_number)}. {lesson[0][0]} - {lesson[0][1]}\n"
 
             lesson_number += 1
     else:
