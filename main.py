@@ -78,12 +78,12 @@ def main(message):
                          parse_mode="Markdown",
                          disable_web_page_preview=True)
     elif request == "розклад" or request == "р":
-        result = "😃 1: 9:00-10:20\n" \
-                "🙂 2: 10:30-11:50\n" \
-                "🙃 3: 12:30-13:50\n" \
-                "😶 4: 14:00-15:20\n" \
-                "😶‍🌫️ 5: 15:30-16:50\n" \
-                "🫠 6: 17:00-18:20\n" \
+        result = "😃 1: 9:00-10:20\n\n" \
+                "🙂 2: 10:30-11:50\n\n" \
+                "🙃 3: 12:30-13:50\n\n" \
+                "😶 4: 14:00-15:20\n\n" \
+                "😶‍🌫️ 5: 15:30-16:50\n\n" \
+                "🫠 6: 17:00-18:20\n\n" \
                 "💀 7: 18:30-19:50"
         bot.send_message(message.chat.id, result)
     elif request == "все":
@@ -98,7 +98,7 @@ def schedule_checker():
 
 def schedule_send_link(lesson_number):
     for lesson in schedule_list[week_type][weekday][lesson_number]:
-        bot.send_message(CHAT_ID, f"📆 За 5 хвилин пара \"{lesson[0]}: {lesson[1]}\"")
+        bot.send_message(CHAT_ID, f"📆 За 5 хвилин \"{lesson[0]}\": {lesson[1]}")
 
 
 if __name__ == "__main__":
