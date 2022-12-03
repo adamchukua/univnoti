@@ -11,8 +11,7 @@
 5. Install pyTelegramBotAPI with next command: <code>pip install pyTelegramBotAPI</code>
 6. Install schedule with next command: <code>pip install schedule</code>
 7. Create file secret.py and type the following code, where [tg-token] is token of your bot given by @botfather (https://sendpulse.com/knowledge-base/chatbot/telegram/create-telegram-chatbot) and chat-id is chat's id where you want to have notifications (you can use https://t.me/RawDataBot):<br>
-<pre><code>
-TOKEN = '[tg-token]'
+<pre><code>TOKEN = '[tg-token]'
 CHAT_ID = [chat-id]
 </code></pre>
 8. Start the bot by following code: <code>python main.py</code>
